@@ -28,6 +28,8 @@ app.listen(3000, () => {
 
 const express = require('express');
 const app = express();
+// add public dir
+app.use(express.static('public'));
 
 app.get('/user/:username', (req, res)=> {
     //get parameter data from addressrow
